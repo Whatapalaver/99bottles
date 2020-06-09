@@ -1,5 +1,12 @@
 # 99 Bottles
 
+Sandi Metz has a [99 Bottles Repo](https://github.com/sandimetz/99bottles/tree/master) and the b-exercise branch has the starting framework with full 99 bottles test.
+
+## Run tests
+
+- Un skip the tests you are interested in
+- `ruby test/bottles_test.rb`
+
 ## Installing Ruby
 
 ### Windows

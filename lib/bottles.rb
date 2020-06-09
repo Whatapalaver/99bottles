@@ -1,5 +1,13 @@
 # 99 Bottles of Beer
 class Bottles
+  def song()
+    verses
+  end
+
+  def verses(first=99, last=0)
+    first.downto(last).map { |n| verse(n) }.join("\n")
+  end
+
   def verse(num)
     line1 = "#{tense_one(num)} on the wall, #{tense_one(num).downcase}."
     line2 = if num.zero?
@@ -7,9 +15,11 @@ class Bottles
             else
               "Take #{one_it(num)} down and pass it around, #{tense_two(num)}."
             end
-    [line1, line2, ''].join("\n")
+    line1+ "\n" + line2 + "\n"
   end
 
+  private
+  
   def one_it(num)
     num == 1 ? 'it' : 'one'
   end
